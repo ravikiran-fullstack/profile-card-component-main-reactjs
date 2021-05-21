@@ -2,7 +2,7 @@ import React from "react";
 import ProfileImage from "../assets/image-victor.jpg";
 const Card = () => {
   return (
-    <div className="container">
+    <div className="container center">
       <div className="patternCard"></div>
       <div className="cardBody">
         <img src={ProfileImage} alt="ProfileImage" className="profileImage" />

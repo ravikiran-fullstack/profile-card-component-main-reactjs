@@ -6,6 +6,14 @@
   box-sizing: border-box;
 }
 
+:root {
+	--Dark-cyan: hsl(185, 75%, 39%);
+	--Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+	--Dark-grayish-blue: hsl(227, 10%, 46%);
+	--Dark-gray: hsl(0, 0%, 59%);
+	--white: hsl(0, 0%, 100%);
+}
+
 html{
   font-size: 93.76%;
 }
@@ -13,48 +21,13 @@ html{
 body{
   margin: 0;
   font-family: 'Kumbh Sans', sans-serif;
-  background: hsl(185, 75%, 39%);
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /* background-image: url('./assets/bg-pattern-top.svg');
-  background-position:center;
-  background-repeat: no-repeat; */
-}
-
-.main{
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-}
-
-.div1{
-  flex: 50%;
-  background-image: url('./assets/bg-pattern-top.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-  top: -195px;
-  left: -100px;
-  /* border: 1px solid red; */
-  height: 100vh;
-  width: 50vw;
-}
-
-.div2{
-  flex: 50%;
-  background-image: url('./assets/bg-pattern-bottom.svg');
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain;
-  position: absolute;
-  height: 100vh;
-  width: 50vw;
-  bottom: -225px;
-  right: -108px;
+  
+  background: -45vw -130vh/100% no-repeat url(./assets/bg-pattern-top.svg), 50vw 50vh no-repeat url(./assets/bg-pattern-bottom.svg), var(--Dark-cyan);
 }
 
 .center{
@@ -71,12 +44,23 @@ body{
   background-color: white;
   border-radius: 10px;
   color: black;
+  box-shadow: 5px 5px 20px 9px rgb(0 0 0 / 20%);
 }
 
 @media(max-width:1080px){
+
+  body{
+    background: -40vw -30vh/100% no-repeat url(./assets/bg-pattern-top.svg), 50vw 50vh no-repeat url(./assets/bg-pattern-bottom.svg), var(--Dark-cyan) !important;
+  }
   .container{
     width: 90vw;
     margin:40px 20px !important;
+  }
+
+  .center{
+    position: absolute;
+    top: 25vh;
+    left: 0 !important;
   }
 }
 
@@ -112,12 +96,8 @@ img {
   margin-bottom: -10px;
 }
 
-.heading span{
-  color: hsl(227, 10%, 46%);
-}
-
-.city p{
-  color: hsl(227, 10%, 46%);
+.heading span, .city p, .socialMedia p{
+  color: var(--Dark-grayish-blue);
 }
 
 .socialMedia{
@@ -130,8 +110,4 @@ hr{
   border: 0;
   border-bottom: 1px solid #ccc;
   background: #999;
-}
-
-.socialMedia p{
-  color: hsl(227, 10%, 46%);
 }
