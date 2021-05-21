@@ -19,9 +19,48 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url('./assets/bg-pattern-top.svg');
+  /* background-image: url('./assets/bg-pattern-top.svg');
   background-position:center;
+  background-repeat: no-repeat; */
+}
+
+.main{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.div1{
+  flex: 50%;
+  background-image: url('./assets/bg-pattern-top.svg');
   background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -195px;
+  left: -100px;
+  /* border: 1px solid red; */
+  height: 100vh;
+  width: 50vw;
+}
+
+.div2{
+  flex: 50%;
+  background-image: url('./assets/bg-pattern-bottom.svg');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  position: absolute;
+  height: 100vh;
+  width: 50vw;
+  bottom: -225px;
+  right: -108px;
+}
+
+.center{
+  position: absolute;
+  top: 25vh;
+  left: 34vw;
 }
 
 .container{
@@ -48,7 +87,7 @@ body{
 
 .patternCard{
   background-image: url('./assets/bg-pattern-card.svg');
-  flex: 25%;
+  height: 35%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
